@@ -13,8 +13,8 @@
         android:layout_height="39dp"
         android:text="help"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="267dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="52dp" />
 
     <Button
         android:id="@+id/button2"
