@@ -17,7 +17,7 @@ public class setting extends Activity{
 
         Button button1 = (Button) findViewById(R.id.button1);
 
-        button1.setOnClickListener({
+        button1.setOnClickListener((v) -> {
 
             Intent intent = new Intent(setting.this,resistance.class);
             startActivity(intent);
