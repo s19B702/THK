@@ -20,11 +20,6 @@ public class help  extends Activity{
 
         text.setText("あぱー");
 
-        Button button = (Button) findViewById(R.id.back);
 
-        button.setOnClickListener((v) -> {
-            Intent intent = new Intent(help.this,resistance.class);
-            startActivity(intent);
-        });
     }
 }
