@@ -15,7 +15,7 @@ public class setting extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting);
 
-        Button button1 = (Button) findViewById(R.id.button1);
+        Button button1 = (Button) findViewById(R.id.button);
 
         button1.setOnClickListener((v) -> {
 
