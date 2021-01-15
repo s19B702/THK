@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">THK</string>
+
+    <string-array name="list">
+    <item>easy</item>
+    <item>normal</item>
+    <item>hard</item>
+</string-array>
 </resources>

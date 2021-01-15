@@ -6,34 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <Button
         android:id="@+id/button"
         android:layout_width="74dp"
         android:layout_height="39dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginRight="300dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="297dp"
+        android:layout_marginRight="297dp"
+        android:layout_marginBottom="30dp"
         android:text="help"
         app:layout_constraintBottom_toTopOf="@+id/spinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
 
     <Button
         android:id="@+id/button2"
         android:layout_width="84dp"
         android:layout_height="40dp"
-        android:layout_marginStart="161dp"
-        android:layout_marginLeft="161dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="166dp"
-        android:layout_marginRight="166dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginLeft="163dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginRight="164dp"
         android:layout_marginBottom="80dp"
         android:text="戻る"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,19 +43,17 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="401dp"
+        android:layout_width="match_parent"
         android:layout_height="68dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="360dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginBottom="222dp"
+        android:entries="@array/list"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
         tools:ignore="MissingConstraints" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
