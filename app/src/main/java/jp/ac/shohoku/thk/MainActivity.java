@@ -19,6 +19,7 @@ import android.view.MotionEvent;
         public int num1 = 0;
         public int num2 = 0;
         public int num3 = 0;
+        public int num4 = 0;
 
         Random random = new Random();
 
@@ -37,6 +38,7 @@ import android.view.MotionEvent;
             num1 = random.nextInt(10);
             num2 = random.nextInt(10);
             num3 = random.nextInt(10);
+            num4 = random.nextInt(10);
 
             while (true) {
 
@@ -113,9 +115,33 @@ import android.view.MotionEvent;
                 p3.setColor(Color.argb(255, 255, 255, 255));
             }
 
+            if (num4 == 0) {
+                p3.setColor(Color.argb(255, 0, 0, 0));
+            } else if (num4 == 1) {
+                p3.setColor(Color.argb(255, 165, 42, 42));
+            } else if (num4 == 2) {
+                p3.setColor(Color.argb(255, 255, 0, 0));
+            } else if (num4 == 3) {
+                p3.setColor(Color.argb(255, 255, 165, 0));
+            } else if (num4 == 4) {
+                p3.setColor(Color.argb(255, 255, 255, 0));
+            } else if (num4 == 5) {
+                p3.setColor(Color.argb(255, 0, 128, 0));
+            } else if (num4 == 6) {
+                p3.setColor(Color.argb(255, 0, 0, 255));
+            } else if (num4 == 7) {
+                p3.setColor(Color.argb(255, 238, 130, 238));
+            } else if (num4 == 8) {
+                p3.setColor(Color.argb(255, 128, 128, 128));
+            } else if (num4 == 9) {
+                p3.setColor(Color.argb(255, 255, 255, 255));
+            }
+
             canvas.drawRect(100,100,200,200,p1);
             canvas.drawRect(210,100,300,200,p2);
             canvas.drawRect(310,100,400,200,p3);
+            canvas.drawRect(410,100,500,200,p4);
+
 
         }
         @Override

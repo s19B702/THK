@@ -15,8 +15,20 @@ public class setting extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting);
         // ボタンを押したときにイベントを取得できるようにする
-        Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new OnClickListener() {
+        Button button1 = (Button) findViewById(R.id.button);
+        Button button2 = (Button) findViewById(R.id.button2);
+
+        button1.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(setting.this, help.class);
+
+                startActivity(intent);
+            }
+        });
+
+        button2.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -25,5 +37,6 @@ public class setting extends Activity{
                 startActivity(intent);
             }
         });
+
     }
 }
