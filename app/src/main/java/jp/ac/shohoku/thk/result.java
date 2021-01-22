@@ -6,28 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.LinearLayout;
 
-public class help  extends Activity{
-
+public class result extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.help);
-        Button button1 = (Button) findViewById(R.id.back);
-
-        TextView text = findViewById(R.id.text);
-
-        text.setText("あいうえお");
+        Button button1 = (Button) findViewById(R.id.button);
         button1.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(help.this, result.class);
+            Intent intent = new Intent(result.this, help.class);
 
-                startActivity(intent);
+            startActivity(intent);
             }
         });
     }
 }
+

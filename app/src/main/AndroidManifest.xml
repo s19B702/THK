@@ -20,6 +20,7 @@
         </activity>
         <activity android:label="THK"  android:name=".resistance"/>
         <activity android:label="THK"  android:name=".help"/>
+        <activity android:label="THK"  android:name=".result"/>
     </application>
 
 </manifest>
