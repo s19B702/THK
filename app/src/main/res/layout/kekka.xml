@@ -12,7 +12,6 @@
         android:layout_height="347dp"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="50dp"
-        android:text="結果表示予定"
         android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/back"
         app:layout_constraintEnd_toEndOf="parent"

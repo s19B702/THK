@@ -22,12 +22,6 @@ import java.lang.String;
 
     public class MainActivity extends View {
 
-
-        public int num1 = 0;
-        public int num2 = 0;
-        public int num3 = 0;
-        public int num4 = 0;
-
         public String STR;
         boolean bool = false;
 
@@ -62,10 +56,10 @@ import java.lang.String;
             Paint p3 = new Paint();
             Paint p4 = new Paint();
 
-            num1 = random.nextInt(10);
-            num2 = random.nextInt(10);
-            num3 = random.nextInt(10);
-            num4 = random.nextInt(10);
+            int num1 = random.nextInt(10);
+            int num2 = random.nextInt(10);
+            int num3 = random.nextInt(10);
+            int num4 = random.nextInt(10);
 
             while (true) {
 
@@ -162,6 +156,12 @@ import java.lang.String;
                 p3.setColor(Color.argb(255, 128, 128, 128));
             } else if (num4 == 9) {
                 p3.setColor(Color.argb(255, 255, 255, 255));
+            }
+
+            if(num1 != 0 && num2 != 0 && num3 != 0){
+
+
+
             }
 
             canvas.drawRect(100,100,200,200,p1);
