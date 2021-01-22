@@ -1,16 +1,23 @@
 package jp.ac.shohoku.thk;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.HardwareRenderer;
 import android.graphics.Paint;
 import android.icu.text.IDNA;
+import android.os.Bundle;
+import android.text.SpannableStringBuilder;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import java.util.Random;
 import android.view.MotionEvent;
+import android.widget.EditText;
+import java.lang.String;
+
 
 
     public class MainActivity extends View {
@@ -21,11 +28,30 @@ import android.view.MotionEvent;
         public int num3 = 0;
         public int num4 = 0;
 
+        public String STR;
+
         Random random = new Random();
 
         public MainActivity(Context context, AttributeSet attrs) {
             super(context, attrs);
 
+        }
+
+
+        public class Test extends Activity {
+            @Override
+            protected void onCreate(Bundle icicle) {
+                super.onCreate(icicle);
+
+                EditText edit = new EditText(this);
+                edit.setHeight(50);
+                setContentView(edit);
+
+                SpannableStringBuilder sb = (SpannableStringBuilder) edit.getText();
+                String str = sb.toString();
+
+                setSTR(str);
+            }
         }
 
         protected void onDraw(Canvas canvas) {
@@ -142,16 +168,30 @@ import android.view.MotionEvent;
             canvas.drawRect(310,100,400,200,p3);
             canvas.drawRect(410,100,500,200,p4);
 
+            String s = getSTR();
+            int usrAnswer=0;
+            int Answer=0;
 
+             usrAnswer = ((num1*10 + num2)*(10^num3));
+
+            if(s != null) {
+                 Answer = Integer.valueOf(s);
+            }
+
+            if(usrAnswer == Answer){
+
+                num1 = num2;
+
+            }
         }
-        @Override
-        public boolean onTouchEvent(MotionEvent event) {
-            int x = (int) event.getX();
-            int y = (int) event.getY();
 
-            //長方形の内部で
 
-            invalidate(); //再描画
-            return super.onTouchEvent(event);
+        public void setSTR(String str){
+            STR = str;
         }
+
+        public String getSTR() {
+            return STR;
+        }
+
     }

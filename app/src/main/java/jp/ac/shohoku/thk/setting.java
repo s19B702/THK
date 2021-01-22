@@ -14,6 +14,10 @@ public class setting extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting);
+
+        Intent intent = this.getIntent();
+        String extraString = intent.getStringExtra("KEY");
+
         // ボタンを押したときにイベントを取得できるようにする
         Button button1 = (Button) findViewById(R.id.button);
         Button button2 = (Button) findViewById(R.id.button2);
