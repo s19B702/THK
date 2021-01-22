@@ -24,7 +24,7 @@ public class help  extends Activity{
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(help.this, result.class);
+                Intent intent = new Intent(help.this, setting.class);
 
                 startActivity(intent);
             }

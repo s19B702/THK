@@ -29,6 +29,7 @@ import java.lang.String;
         public int num4 = 0;
 
         public String STR;
+        boolean bool = false;
 
         Random random = new Random();
 
@@ -54,7 +55,7 @@ import java.lang.String;
             }
         }
 
-        protected void onDraw(Canvas canvas) {
+        public void onDraw(Canvas canvas) {
             super.onDraw(canvas);
             Paint p1 = new Paint();
             Paint p2 = new Paint();
@@ -180,10 +181,12 @@ import java.lang.String;
 
             if(usrAnswer == Answer){
 
-                num1 = num2;
+                bool = true;
 
             }
+
         }
+
 
 
         public void setSTR(String str){

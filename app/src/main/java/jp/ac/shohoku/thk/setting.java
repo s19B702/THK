@@ -16,7 +16,6 @@ public class setting extends Activity{
         setContentView(R.layout.setting);
 
         Intent intent = this.getIntent();
-        String extraString = intent.getStringExtra("KEY");
 
         // ボタンを押したときにイベントを取得できるようにする
         Button button1 = (Button) findViewById(R.id.button);
