@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class result extends Activity {
+public class kekka extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +16,8 @@ public class result extends Activity {
             @Override
             public void onClick(View v) {
 
-            Intent intent = new Intent(result.this, help.class);
+            Intent intent = new Intent(kekka.this, help.class);
+
 
             startActivity(intent);
             }
