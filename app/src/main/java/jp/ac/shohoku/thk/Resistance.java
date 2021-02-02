@@ -5,25 +5,26 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.HardwareRenderer;
 import android.graphics.Paint;
-import android.icu.text.IDNA;
 import android.os.Bundle;
-import android.text.SpannableStringBuilder;
-import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
-import java.util.Random;
-import android.view.MotionEvent;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
-import java.lang.String;
+import android.widget.TextView;
+
+import java.util.Random;
 
 
+public class Resistance extends Activity {
 
-    public class MainActivity extends View {
+    public String STR;
+    public int Use_Ans;
+    public int Alr_Ans;
 
-        public String STR;
-        boolean bool = false;
+
+    public class Set_resistance_value extends View {
+
 
         Random random = new Random();
         Paint p1 = new Paint();
@@ -36,27 +37,11 @@ import java.lang.String;
         int num3 = random.nextInt(10);
         int num4 = random.nextInt(10);
 
-        public MainActivity(Context context, AttributeSet attrs) {
-            super(context, attrs);
 
+        public Set_resistance_value(Context context) {
+            super(context);
         }
 
-
-        public class Test extends Activity {
-            @Override
-            protected void onCreate(Bundle icicle) {
-                super.onCreate(icicle);
-
-                EditText edit = new EditText(this);
-                edit.setHeight(50);
-                setContentView(edit);
-
-                SpannableStringBuilder sb = (SpannableStringBuilder) edit.getText();
-                String str = sb.toString();
-
-                setSTR(str);
-            }
-        }
 
         public void onDraw(Canvas canvas) {
             super.onDraw(canvas);
@@ -138,64 +123,119 @@ import java.lang.String;
             }
 
             if (num4 == 0) {
-                p3.setColor(Color.argb(255, 0, 0, 0));
+                p4.setColor(Color.argb(255, 0, 0, 0));
             } else if (num4 == 1) {
-                p3.setColor(Color.argb(255, 165, 42, 42));
+                p4.setColor(Color.argb(255, 165, 42, 42));
             } else if (num4 == 2) {
-                p3.setColor(Color.argb(255, 255, 0, 0));
+                p4.setColor(Color.argb(255, 255, 0, 0));
             } else if (num4 == 3) {
-                p3.setColor(Color.argb(255, 255, 165, 0));
+                p4.setColor(Color.argb(255, 255, 165, 0));
             } else if (num4 == 4) {
-                p3.setColor(Color.argb(255, 255, 255, 0));
+                p4.setColor(Color.argb(255, 255, 255, 0));
             } else if (num4 == 5) {
-                p3.setColor(Color.argb(255, 0, 128, 0));
+                p4.setColor(Color.argb(255, 0, 128, 0));
             } else if (num4 == 6) {
-                p3.setColor(Color.argb(255, 0, 0, 255));
+                p4.setColor(Color.argb(255, 0, 0, 255));
             } else if (num4 == 7) {
-                p3.setColor(Color.argb(255, 238, 130, 238));
+                p4.setColor(Color.argb(255, 238, 130, 238));
             } else if (num4 == 8) {
-                p3.setColor(Color.argb(255, 128, 128, 128));
+                p4.setColor(Color.argb(255, 128, 128, 128));
             } else if (num4 == 9) {
-                p3.setColor(Color.argb(255, 255, 255, 255));
+                p4.setColor(Color.argb(255, 255, 255, 255));
             }
 
-            if(num1 != 0 && num2 != 0 && num3 != 0){
 
-
-
-            }
-
-            canvas.drawRect(100,100,200,200,p1);
-            canvas.drawRect(210,100,300,200,p2);
-            canvas.drawRect(310,100,400,200,p3);
-            canvas.drawRect(410,100,500,200,p4);
+            canvas.drawRect(100, 100, 200, 200, p1);
+            canvas.drawRect(210, 100, 300, 200, p2);
+            canvas.drawRect(310, 100, 400, 200, p3);
+            canvas.drawRect(410, 100, 500, 200, p4);
 
             String s = getSTR();
-            int usrAnswer=0;
-            int Answer=0;
 
-             usrAnswer = ((num1*10 + num2)*(10^num3));
+            setUse_Ans((num1 * 10 + num2) * (10 ^ num3));
 
-            if(s != null) {
-                 Answer = Integer.valueOf(s);
+            if (s != null) {
+                setArl_Ans(Integer.valueOf(s));
             }
 
-            if(usrAnswer == Answer){
-
-                bool = true;
-
-            }
-
-        }
-
-
-
-        public void setSTR(String str){
-            STR = str;
-        }
-
-        public String getSTR() {
-            return STR;
         }
 
     }
+
+
+    @Override
+    //入力テキスト欄を作成したりする
+    //クリックしたときの処理を行う場所
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.resistance);
+
+
+        final EditText editText = (EditText) findViewById(R.id.editText1); //edittextの値を格納
+        Button button4 = (Button) findViewById(R.id.button4);                //ボタンの状態を格納
+        final TextView textView = (TextView) findViewById(R.id.Text1);     //textの中身を格納
+
+        button4.setOnClickListener(new OnClickListener() {  //ボタンが押されたときの処理
+
+            public void onClick(View view) {
+                String text = editText.getText().toString();
+
+                Alr_Ans = getAlr_Ans();
+                Use_Ans = getUse_Ans();
+
+                if (Alr_Ans != 0 && Use_Ans != 0){
+
+                    if (!text.equals("")) {
+                        textView.setText(text);
+                        editText.setText("");
+                    }
+
+                    if (Alr_Ans == Use_Ans) {
+                        Intent intent = new Intent(Resistance.this, Result.class);
+                        intent.putExtra("KEY", text);
+                        startActivity(intent);
+
+                        setSTR(text);
+                    }
+
+                    } else {
+                        Intent intent = new Intent(Resistance.this, Start_Acticity.class);
+                        startActivity(intent);
+
+                        setSTR(text);
+                    }
+
+            }
+
+
+        });
+    }
+
+
+
+    public void setSTR(String str) {
+        STR = str;
+    }
+
+    public String getSTR() {
+        return STR;
+    }
+
+    public void setUse_Ans(int usr_ans){
+        Use_Ans = usr_ans;
+    }
+
+    public int getUse_Ans(){
+        return Use_Ans;
+    }
+
+    public void setArl_Ans(int alr_Ans){
+        Alr_Ans = alr_Ans;
+    }
+
+    public int getAlr_Ans() {
+        return Alr_Ans;
+    }
+}
+
+

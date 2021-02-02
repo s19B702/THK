@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".setting"
+            android:name=".Start_Acticity"
             android:label="THK">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,9 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:label="THK"  android:name=".resistance"/>
-        <activity android:label="THK"  android:name=".help"/>
-        <activity android:label="THK"  android:name=".kekka"/>
+        <activity android:label="THK"  android:name=".Resistance"/>
+        <activity android:label="THK"  android:name=".Help"/>
+        <activity android:label="THK"  android:name=".Result"/>
     </application>
 
 </manifest>

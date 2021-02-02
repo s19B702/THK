@@ -7,27 +7,33 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.LinearLayout;
 
-public class help  extends Activity{
+public class Result extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.help);
-        Button button1 = (Button) findViewById(R.id.back);
+        setContentView(R.layout.kekka);
 
-        TextView text = findViewById(R.id.text);
+        Intent intent1 = getIntent();
+        String data = intent1.getStringExtra("KEY");
 
-        text.setText("あいうえお");
+        TextView textView = findViewById(R.id.text);
+        textView.setText(data);
+
+        Button button1 = (Button) findViewById(R.id.button6);
         button1.setOnClickListener(new OnClickListener() {
+
+
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(help.this, setting.class);
+                Intent intent = new Intent(Result.this, Start_Acticity.class);
 
                 startActivity(intent);
             }
+
+
         });
     }
 }
+

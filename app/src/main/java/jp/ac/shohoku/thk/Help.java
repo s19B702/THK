@@ -8,34 +8,25 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.w3c.dom.CDATASection;
-
-public class kekka extends Activity {
+public class Help extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kekka);
+        setContentView(R.layout.help);
+        Button button1 = (Button) findViewById(R.id.back);
 
-        Intent intent1 = getIntent();
-        String data = intent1.getStringExtra("KEY");
+        TextView text = findViewById(R.id.text);
 
-        TextView textView = findViewById(R.id.text);
-        textView.setText(data);
-
-        Button button1 = (Button) findViewById(R.id.button6);
+        text.setText("あいうえお");
         button1.setOnClickListener(new OnClickListener() {
-
-
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(kekka.this,setting.class);
+
+                Intent intent = new Intent(Help.this, Start_Acticity.class);
 
                 startActivity(intent);
             }
-
-
         });
     }
 }
-
