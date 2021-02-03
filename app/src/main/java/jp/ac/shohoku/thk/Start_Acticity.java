@@ -6,9 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
-public class setting extends Activity{
+public class Start_Acticity extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +24,7 @@ public class setting extends Activity{
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(setting.this, help.class);
+                Intent intent = new Intent(Start_Acticity.this, Help.class);
 
                 startActivity(intent);
             }
@@ -35,7 +34,7 @@ public class setting extends Activity{
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(setting.this, resistance.class);
+                Intent intent = new Intent(Start_Acticity.this, Resistance.class);
 
                 startActivity(intent);
             }
