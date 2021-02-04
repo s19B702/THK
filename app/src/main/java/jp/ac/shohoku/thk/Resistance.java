@@ -197,7 +197,7 @@ public class Resistance extends Activity {
                     }
 
                 } else {
-                    Intent intent = new Intent(Resistance.this, Start_Acticity.class);
+                    Intent intent = new Intent(Resistance.this, Start_Activity.class);
                     startActivity(intent);
 
                     setSTR(text);
