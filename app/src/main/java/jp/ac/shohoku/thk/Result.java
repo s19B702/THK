@@ -13,7 +13,7 @@ public class Result extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kekka);
+        setContentView(R.layout.result);
 
         Intent intent1 = getIntent();
         String data = intent1.getStringExtra("KEY");

@@ -145,10 +145,10 @@ public class Resistance extends Activity {
             }
 
 
-            canvas.drawRect(100, 100, 200, 200, p1);
-            canvas.drawRect(210, 100, 300, 200, p2);
-            canvas.drawRect(310, 100, 400, 200, p3);
-            canvas.drawRect(410, 100, 500, 200, p4);
+            canvas.drawRect(200, 200, 200, 200, p1);
+            canvas.drawRect(310, 300, 300, 200, p2);
+            canvas.drawRect(410, 400, 400, 200, p3);
+            canvas.drawRect(510, 500, 500, 200, p4);
 
             String s = getSTR();
 

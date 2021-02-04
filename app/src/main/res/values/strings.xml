@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">THK</string>
+    <string name="app_name">抵抗計算</string>
 
     <string-array name="list">
     <item>easy</item>

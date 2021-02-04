@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Resistance">
-
+    >
 
     <Button
         android:id="@+id/button4"
@@ -40,7 +39,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
-    
+
     <TextView
         android:id="@+id/Text1"
         android:layout_width="175dp"
@@ -58,6 +57,8 @@
         tools:ignore="MissingConstraints"
         android:text="No Input"
         />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
