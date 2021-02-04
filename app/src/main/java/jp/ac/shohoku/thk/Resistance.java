@@ -19,8 +19,8 @@ import java.util.Random;
 public class Resistance extends Activity {
 
     public String STR;
-    public int Use_Ans;
-    public int Alr_Ans;
+    public int Use_Ans = 0;
+    public int Alr_Ans = 0;
 
 
     public class Set_resistance_value extends View {
@@ -155,11 +155,9 @@ public class Resistance extends Activity {
             setUse_Ans((num1 * 10 + num2) * (10 ^ num3));
 
             if (s != null) {
-                setArl_Ans(Integer.valueOf(s));
+                setAlr_Ans(Integer.valueOf(s));
             }
-
         }
-
     }
 
 
@@ -183,7 +181,7 @@ public class Resistance extends Activity {
                 Alr_Ans = getAlr_Ans();
                 Use_Ans = getUse_Ans();
 
-                if (Alr_Ans != 0 && Use_Ans != 0){
+                if (Alr_Ans != 0 && Use_Ans != 0) {
 
                     if (!text.equals("")) {
                         textView.setText(text);
@@ -198,19 +196,18 @@ public class Resistance extends Activity {
                         setSTR(text);
                     }
 
-                    } else {
-                        Intent intent = new Intent(Resistance.this, Start_Acticity.class);
-                        startActivity(intent);
+                } else {
+                    Intent intent = new Intent(Resistance.this, Start_Acticity.class);
+                    startActivity(intent);
 
-                        setSTR(text);
-                    }
+                    setSTR(text);
+                }
 
             }
 
 
         });
     }
-
 
 
     public void setSTR(String str) {
@@ -221,15 +218,15 @@ public class Resistance extends Activity {
         return STR;
     }
 
-    public void setUse_Ans(int usr_ans){
+    public void setUse_Ans(int usr_ans) {
         Use_Ans = usr_ans;
     }
 
-    public int getUse_Ans(){
+    public int getUse_Ans() {
         return Use_Ans;
     }
 
-    public void setArl_Ans(int alr_Ans){
+    public void setAlr_Ans(int alr_Ans) {
         Alr_Ans = alr_Ans;
     }
 
