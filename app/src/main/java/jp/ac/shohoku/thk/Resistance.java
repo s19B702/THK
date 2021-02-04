@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -19,8 +20,8 @@ import java.util.Random;
 public class Resistance extends Activity {
 
     public String STR;
-    public int Use_Ans ;
-    public int Alr_Ans ;
+    public int Use_Ans;
+    public int Alr_Ans;
 
 
     public class Set_resistance_value extends View {
@@ -37,9 +38,8 @@ public class Resistance extends Activity {
         int num4 = random.nextInt(10);
 
 
-
-        public Set_resistance_value(Context context) {
-            super(context);
+        public Set_resistance_value(Context context, AttributeSet attrs) {
+            super(context, attrs);
         }
 
 
@@ -51,13 +51,10 @@ public class Resistance extends Activity {
 
                 if (num1 == 0) {
                     random.nextInt(10);
-                }
-
-                if (num1 != 0) {
+                } else {
                     break;
                 }
             }
-
 
 
             if (num1 == 1) {
@@ -147,17 +144,17 @@ public class Resistance extends Activity {
             }
 
 
-            canvas.drawRect(200, 200, 200, 200, p1);
-            canvas.drawRect(310, 300, 300, 200, p2);
-            canvas.drawRect(410, 400, 400, 200, p3);
-            canvas.drawRect(510, 500, 500, 200, p4);
+            canvas.drawRect(200, 100, 200, 200, p1);
+            canvas.drawRect(310, 100, 300, 200, p2);
+            canvas.drawRect(410, 100, 400, 200, p3);
+            canvas.drawRect(510, 100, 500, 200, p4);
 
             String s = getSTR();
 
             setUse_Ans((num1 * 10 + num2) * (10 ^ num3));
 
             if (s != null) {
-                setAlr_Ans(Integer.valueOf(s));
+                setAlr_Ans(Integer.parseInt(s));
             }
         }
     }
@@ -235,6 +232,6 @@ public class Resistance extends Activity {
     public int getAlr_Ans() {
         return Alr_Ans;
     }
+
+
 }
-
-

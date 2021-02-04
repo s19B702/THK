@@ -21,6 +21,7 @@
         <activity android:label="THK"  android:name=".Resistance"/>
         <activity android:label="THK"  android:name=".Help"/>
         <activity android:label="THK"  android:name=".Result"/>
+        <activity android:label="THK"  android:name=".Resistance_ver2"/>
     </application>
 
 </manifest>
