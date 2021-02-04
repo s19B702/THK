@@ -57,6 +57,7 @@
         tools:ignore="MissingConstraints"
         android:text="No Input"
 
+
         />
 
     <jp.ac.shohoku.thk.MainActivity

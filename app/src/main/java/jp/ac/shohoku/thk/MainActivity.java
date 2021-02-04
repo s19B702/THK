@@ -2,19 +2,15 @@ package jp.ac.shohoku.thk;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.HardwareRenderer;
 import android.graphics.Paint;
-import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import java.util.Random;
-import android.view.MotionEvent;
+
 import android.widget.EditText;
 import java.lang.String;
 
