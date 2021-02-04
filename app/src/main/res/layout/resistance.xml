@@ -60,7 +60,7 @@
 
         />
 
-    <jp.ac.shohoku.thk.Resistance
+    <jp.ac.shohoku.thk.Resistance_ver2
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
