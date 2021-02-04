@@ -19,12 +19,11 @@ import java.util.Random;
 public class Resistance extends Activity {
 
     public String STR;
-    public int Use_Ans = 0;
-    public int Alr_Ans = 0;
+    public int Use_Ans ;
+    public int Alr_Ans ;
 
 
     public class Set_resistance_value extends View {
-
 
         Random random = new Random();
         Paint p1 = new Paint();
@@ -36,6 +35,7 @@ public class Resistance extends Activity {
         int num2 = random.nextInt(10);
         int num3 = random.nextInt(10);
         int num4 = random.nextInt(10);
+
 
 
         public Set_resistance_value(Context context) {
@@ -57,6 +57,8 @@ public class Resistance extends Activity {
                     break;
                 }
             }
+
+
 
             if (num1 == 1) {
                 p1.setColor(Color.argb(255, 165, 42, 42));
